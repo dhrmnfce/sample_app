@@ -2,6 +2,9 @@
   <%= gravatar_for user, size: 50 %>
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
-    <%= link_to "delete", user, method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+    <!-- Implement this when you can write a test for deleting users without javascript enabled -->
+    <%# link_to "delete", user_path(user, destroy: true), data: { confirm: "Are you sure?" }, method: :delete %>
   <% end %>
 </li>
+

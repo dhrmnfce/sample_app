@@ -9,6 +9,10 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    # Implement this when you can write a test for deleting users without javascript enabled
+    # if params[:destroy]
+    #   render 'confirm_destroy' and return
+    # end
   end
   
   def new
