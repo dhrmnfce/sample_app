@@ -1,0 +1,9 @@
+<% provide(:title, "Delete "+@user.name) %>
+<%= form_for(@user, url: user_path(@user), html: { method: :delete }) do |f| %>
+  <h1>Confirm user deletion</h1>
+  <h2>Are you sure you want to delete <%= @user.name %>?</h3>
+    <p class="center">
+    <%= submit_tag "Delete", class: 'btn btn-lg btn-danger' %>
+    or <%= link_to "Cancel", users_path %>
+    </p>
+<% end %>
