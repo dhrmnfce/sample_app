@@ -7,11 +7,11 @@ gem 'rails', '4.2.2'
 gem 'bcrypt', '3.1.7'
 # Use faker to generate sample users
 gem 'faker', '1.4.2'
-# Use carrierwave for image upload in development
+# Use carrierwave for image upload in dev
 gem 'carrierwave', '0.10.0'
 # Use mini_magick for image resizing
 gem 'mini_magick', '3.8.0'
-# Use fog for image storage in production
+# Use fog for image uplaod in production
 gem 'fog', '1.26.0'
 # Use will_paginate to add pagination to users index
 gem 'will_paginate', '3.0.7'

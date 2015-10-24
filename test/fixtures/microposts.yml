@@ -21,7 +21,7 @@ most_recent:
 ants:
   content: "Oh, is that what you want? Because that's how you get ants!"
   created_at: <%= 2.years.ago %>
-  user: puter
+  user: droid
 
 zone:
   content: "Danger zone!"
@@ -31,7 +31,7 @@ zone:
 tone:
   content: "I'm sorry. Your words made sense, but your sarcastic tone did not."
   created_at: <%= 10.minutes.ago %>
-  user: droid
+  user: puter
 
 van:
   content: "Dude, this van's, like, rolling probable cause."
@@ -39,8 +39,22 @@ van:
   user: droid
   
 <% 30.times do |n| %>
-micropost_<%= n %>:
+admin_micropost_<%= n %>:
   content: <%= Faker::Lorem.sentence(5) %>
   created_at: <%= 42.days.ago %>
   user: dylan
+<% end %>
+
+<% 30.times do |n| %>
+droid_micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: droid
+<% end %>
+
+<% 30.times do |n| %>
+puter_micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: puter
 <% end %>

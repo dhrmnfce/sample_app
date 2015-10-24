@@ -1,7 +1,7 @@
 <%= form_for(@micropost, html: { multipart: true }) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Post an update...", class: 'form-control' %>
+    <%= f.text_area :content, placeholder: "Compose new post..." %>
   </div>
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
